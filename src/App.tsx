@@ -39,7 +39,9 @@ console.log(advice)
             setError("Advice not found");
             console.error(err);
         } finally {
-            setLoading(false);
+            setTimeout(() => {
+                setLoading(false);
+            }, 1000);
         }
     })();
   };
