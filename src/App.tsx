@@ -53,7 +53,7 @@ console.log(advice)
 
         {!error && (
           <>
-            <h1>#Advice {advice ? advice.id : "..."}</h1>
+            <h1>#Advice {loading ? "..." : advice?.id}</h1>
             {loading ? (
               <span className="loader"></span>
             ) : (
