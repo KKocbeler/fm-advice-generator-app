@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@800&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: var(--font-size-body);
+}
+
+body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+    font-family: var(--font-family);
+    font-size: var(--font-body);
+    font-weight: var(--font-weight);
+    background-color: var(--blue-950);
+    color: var(--blue-200);
+}
+
+:root {
+
+    --blue-200: hsl(193, 38%, 86%);
+    --green-300: hsl(150, 100%, 66%);
+    --blue-600: hsl(217, 19%, 38%);
+    --blue-900: hsl(217, 19%, 24%);
+    --blue-950: hsl(218, 23%, 16%);
+
+    --font-weight: 800;
+    --font-body: clamp(1rem, 2vw + 1rem, 1.5rem);
+    --font-family: "Manrope", sans-serif;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+li {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    border: none;
+    background-color: transparent;
+    font-size: inherit;
+}
+
+.container {
+    position: relative;
+    max-width: 600px;
+    background-color: var(--blue-900);
+    padding: 2rem 2rem 5rem 2rem;
+    border-radius: 1rem;
+    text-align: center;
+    display: grid;
+    justify-items: center;
+    gap: 2rem;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    h1 {
+        color: var(--green-300);
+        font-size: 1rem;
+    }
+
+    button {
+        position: absolute;
+        bottom: 0; left: 50%;
+        transform: translate(-50%, 50%);
+        padding: 1.5rem;
+        border-radius: 50%;
+        background-color: var(--green-300);
+        transition: all .3s;
+        cursor: pointer;
+        &:hover {
+            box-shadow: hsla(150, 100%, 66%, .9) 0px 5px 15px;
+        }
+    }
+}
+
+
+// LOADER
+
+.loader {
+  width: 48px;
+  height: 48px;
+  border: 2px solid #FFF;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
+}
+.loader::after,
+.loader::before {
+  content: '';  
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: var(--green-300);
+  width: 6px;
+  height: 6px;
+  transform: translate(150%, 150%);
+  border-radius: 50%;
+}
+.loader::before {
+  left: auto;
+  top: auto;
+  right: 0;
+  bottom: 0;
+  transform: translate(-150%, -150%);
+}
+
+@keyframes rotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+} 
