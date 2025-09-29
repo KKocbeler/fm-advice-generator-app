@@ -55,9 +55,9 @@ console.log(advice)
           <>
             <h1>#Advice {loading ? "..." : advice?.id}</h1>
             {loading ? (
-              <span className="loader"></span>
+                <span className="loader"></span>
             ) : (
-              advice && <p className="advice">“{advice.advice}”</p>
+                <p className="advice">“{advice?.advice}”</p>
             )}
           </>
         )}

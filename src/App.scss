@@ -69,6 +69,10 @@ button {
         font-size: 1rem;
     }
 
+    p {
+        transition: all .3s;
+    }
+
     button {
         position: absolute;
         bottom: 0; left: 50%;
@@ -80,6 +84,10 @@ button {
         cursor: pointer;
         &:hover {
             box-shadow: hsla(150, 100%, 66%, .9) 0px 5px 15px;
+        }
+
+        &:active {
+            transform: scale(.9);
         }
     }
 }
